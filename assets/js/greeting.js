@@ -21,3 +21,5 @@ if (hour >= 23 || hour < 6) {
 } else {
 	document.getElementById('greetings').innerText = gree4 + name;
 }
+
+doGreeting = false

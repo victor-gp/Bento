@@ -22,6 +22,13 @@ const CONFIG = {
 	greetingEvening: 'Good evening,',
 	greetingNight: 'Go to Sleep!',
 
+	// Quotes
+	quotes: [
+		"hello world",
+		"lorem ipsum",
+		"What is a programmer's favorite hangout place?<br>Foo Bar",
+	],
+
 	// Layout
 	bentoLayout: 'bento', // 'bento', 'lists', 'buttons'
 
