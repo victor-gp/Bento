@@ -22,4 +22,4 @@ if (hour >= 23 || hour < 6) {
 	document.getElementById('greetings').innerText = gree4 + name;
 }
 
-doGreeting = false
+doGreeting = false;
