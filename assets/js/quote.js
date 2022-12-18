@@ -8,11 +8,11 @@ function touchLastShown(now) {
 
 function getLastShown() {
     const storageValue = localStorage.getItem('lastShown');
-    if (storageValue === null) {
-        // if never touched, the epoch will do
-        return new Date(0);
-    } else {
+    if (storageValue !== null) {
         return new Date(storageValue);
+    } else {
+        // if unset, the epoch (0) should show timeBlock
+        return new Date(0);
     }
 }
 
