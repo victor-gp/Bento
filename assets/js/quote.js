@@ -33,16 +33,10 @@ function isQuoteTime(now) {
     return true;
 }
 
-const timeBlock = document.getElementsByClassName('timeBlock')[0];
-const quoteBlock = document.getElementsByClassName('quoteBlock')[0];
-
-function showTimeBlock() {
-    quoteBlock.classList.add("hidden");
-    timeBlock.classList.remove("hidden");
-}
-
 function showQuoteBlock() {
+    const timeBlock = document.getElementsByClassName('timeBlock')[0];
     timeBlock.classList.add("hidden");
+    const quoteBlock = document.getElementsByClassName('quoteBlock')[0];
     quoteBlock.classList.remove("hidden");
 }
 
@@ -52,8 +46,6 @@ if (isQuoteTime(now)) {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const choosenQuote = quotes[randomIndex];
     document.getElementById("quote").innerHTML = choosenQuote;
-} else {
-    showTimeBlock();
 }
 
 touchLastShown(now);
