@@ -25,7 +25,9 @@ function isQuoteTime(now) {
     if (elapsed >= 3 * hourToMs) return false;
 
     // if the part of the day changed, greet
-    //todo
+    const partThen = partOfTheDay(lastShown);
+    const partNow = partOfTheDay(now);
+    if (partThen != partNow) return false;
 
     // else quote
     return true;
