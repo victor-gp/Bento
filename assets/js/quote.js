@@ -35,18 +35,15 @@ function isQuoteTime(now) {
 
 const timeBlock = document.getElementsByClassName('timeBlock')[0];
 const quoteBlock = document.getElementsByClassName('quoteBlock')[0];
-let timeBlockMode;
 
 function showTimeBlock() {
     quoteBlock.classList.add("hidden");
     timeBlock.classList.remove("hidden");
-    timeBlockMode = true;
 }
 
 function showQuoteBlock() {
     timeBlock.classList.add("hidden");
     quoteBlock.classList.remove("hidden");
-    timeBlockMode = false;
 }
 
 if (isQuoteTime(now)) {
