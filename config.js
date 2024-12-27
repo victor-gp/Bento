@@ -50,6 +50,8 @@ const CONFIG = {
 	// ├┴┐│ │ │  │ │ ││││└─┐
 	// └─┘└─┘ ┴  ┴ └─┘┘└┘└─┘
 
+	// Valid iconLibrary values: 'Lucide' (default), 'Simple Icons'.
+
 	firstButtonsContainer: [
 		{
 			id: '1',
@@ -78,7 +80,8 @@ const CONFIG = {
 		{
 			id: '5',
 			name: 'Reddit',
-			icon: 'glasses',
+			icon: 'reddit',
+			iconLibrary: 'Simple Icons',
 			link: 'https://reddit.com',
 		},
 		{
