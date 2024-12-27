@@ -1,8 +1,20 @@
-// todo: Figlet art pending, can't find a generator/style like this.
-
+// TODO: Figlet art pending, can't find a generator/style like this.
 // Functions for generating icons from their <i> placeholders.
 
-lucide.createIcons();
+const iconDataAttribute = (iconLibrary) => {
+	switch(iconLibrary) {
+		case 'Simple Icons':
+			return 'data-simpleicons';
+		case 'Lucide':
+		default:
+			return 'icon-name';
+	}
+}
+
+const createAllIcons = () => {
+	lucide.createIcons();
+	createSimpleIcons();
+}
 
 // Like lucide.createIcons() but for Simple Icons.
 // Replaces Simple Icons placeholders for their corresponding svg.
@@ -26,5 +38,3 @@ const createSimpleIcons = () => {
 		placeholder.replaceWith(imgElement);
 	});
 }
-
-createSimpleIcons();

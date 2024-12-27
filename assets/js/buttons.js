@@ -3,25 +3,16 @@
 // └─┘└─┘ ┴  ┴ └─┘┘└┘└─┘
 // Function to print Button Cards.
 
-const iconDataAttribute = (buttonConfig) => {
-	switch(buttonConfig.iconLibrary) {
-		case 'Simple Icons':
-			return 'data-simpleicons';
-		case 'Lucide':
-		default:
-			return 'icon-name';
-	}
-}
-
 const generateFirstButtonsContainer = () => {
 	for (const button of CONFIG.firstButtonsContainer) {
+		const iconDataAttr = iconDataAttribute(button.iconLibrary);
 		let item = `
         <a
           href="${button.link}"
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
           class="card button button__${button.id}"
         >
-          <i class="buttonIcon" ${iconDataAttribute(button)}="${button.icon}"></i>
+          <i class="buttonIcon" ${iconDataAttr}="${button.icon}"></i>
         </a>
     `;
 
@@ -33,13 +24,14 @@ const generateFirstButtonsContainer = () => {
 
 const generateSecondButtonsContainer = () => {
 	for (const button of CONFIG.secondButtonsContainer) {
+		const iconDataAttr = iconDataAttribute(button.iconLibrary);
 		let item = `
         <a
           href="${button.link}"
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
           class="card button button__${button.id}"
         >
-          <i class="buttonIcon" ${iconDataAttribute(button)}="${button.icon}"></i>
+          <i class="buttonIcon" ${iconDataAttr}="${button.icon}"></i>
         </a>
     `;
 

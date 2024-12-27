@@ -5,9 +5,10 @@
 
 const generateFirstListsContainer = () => {
 	for (const list of CONFIG.firstlistsContainer) {
+		const iconDataAttr = iconDataAttribute(list.iconLibrary);
 		let item = `
         <div class="card list list__${list.id}" id="list_${list.id}">
-          <i class="listIcon" icon-name="${list.icon}"></i>
+          <i class="listIcon" ${iconDataAttr}="${list.icon}"></i>
           <a
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
           href="${list.links[0].link}"
@@ -37,9 +38,10 @@ const generateFirstListsContainer = () => {
 
 const generateSecondListsContainer = () => {
 	for (const list of CONFIG.secondListsContainer) {
+		const iconDataAttr = iconDataAttribute(list.iconLibrary);
 		let item = `
         <div class="card list list__${list.id}" id="list_${list.id}">
-        <i class="listIcon" icon-name="${list.icon}"></i>
+        <i class="listIcon" ${iconDataAttr}="${list.icon}"></i>
         <a
         target="${CONFIG.openInNewTab ? '_blank' : ''}"
         href="${list.links[0].link}"
